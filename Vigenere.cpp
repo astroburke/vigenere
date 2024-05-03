@@ -110,6 +110,7 @@ int main()
 {
     std::string plaintext, key, ciphertext, decryptedtext;
 
+    /// getline is used because we are expecting plaintext that may have whitespace
     std::cout << "Enter plaintext: ";
     getline(std::cin, plaintext);
 
