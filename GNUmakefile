@@ -6,7 +6,7 @@ ALL: testing
 
 # find all of the source files and header files
 
-SOURCES := $(wildcard *.cpp)
+SOURCES := $(tests.cpp)
 HEADERS := $(wildcard *.H)
 
 # create a list of object files by replacing .cpp with .o
@@ -22,9 +22,9 @@ OBJECTS := $(SOURCES:.cpp=.o)
 
 # explicitly write the rule for linking together the executable
 
-test_array: ${OBJECTS}
+tests: ${OBJECTS}
 	g++ -o $@ ${OBJECTS}
 
-testing: test_array
-	$(shell ./test_array)
+testing: tests
+	$(shell ./tests)
 	@if [ ${.SHELLSTATUS} == 0 ]; then echo "all tests pass"; fi
