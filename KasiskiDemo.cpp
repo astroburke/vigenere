@@ -9,6 +9,4 @@ int main() {
     std::cout << std::endl;
 
     performKasiskiExamination(ciphertext);
-
-    return 0;
 }
