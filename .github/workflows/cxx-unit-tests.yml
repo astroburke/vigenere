@@ -1,0 +1,29 @@
+name: cxx-unit-tests
+
+on: [push, pull_request]
+
+jobs:
+  cxx-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y -qq
+          sudo apt-get -qq -y install g++
+
+      - name: Build
+        run: |
+          make tests
+
+      - name: Test
+        run: |
+          ./tests
+
+      - name: Difference
+        run: |
+          ./tests > out
+          diff -w ./tests.out ./out
