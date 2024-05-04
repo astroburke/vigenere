@@ -7,7 +7,7 @@ int main()
     std::string plaintext, key, ciphertext, decryptedtext;
 
     /// getline is used because we are expecting plaintext that may have whitespace
-    std::cout << "Enter plaintext, use all caps: ";
+    std::cout << "Enter plaintext, use all caps and no punctuation: ";
     getline(std::cin, plaintext);
 
     std::cout << "Enter key, use all caps: ";
