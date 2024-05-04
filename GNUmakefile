@@ -6,7 +6,7 @@ ALL: testing
 
 # find all of the source files and header files
 
-SOURCES := $(tests.cpp)
+SOURCES := $(wildcard *.cpp)
 HEADERS := $(wildcard *.H)
 
 # create a list of object files by replacing .cpp with .o
