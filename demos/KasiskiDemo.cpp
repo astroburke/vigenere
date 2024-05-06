@@ -1,4 +1,4 @@
-#include "Kasiski.h"
+#include "../Kasiski.h"
 
 int main() {
     std::string ciphertext;

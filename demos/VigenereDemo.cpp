@@ -1,4 +1,4 @@
-#include "Vigenere.h"
+#include "../Vigenere.h"
 
 /// Simple program that demonstrates Vigenere functions.
 
